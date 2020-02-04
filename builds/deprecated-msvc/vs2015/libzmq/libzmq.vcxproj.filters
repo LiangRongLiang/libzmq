@@ -76,9 +76,6 @@
     <ClCompile Include="..\..\..\..\src\object.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\src\options.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\src\own.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -266,6 +263,20 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\src\tweetnacl.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\curve_mechanism_base.cpp" />
+    <ClCompile Include="..\..\..\..\src\ip_resolver.cpp" />
+    <ClCompile Include="..\..\..\..\src\mechanism_base.cpp" />
+    <ClCompile Include="..\..\..\..\src\zap_client.cpp" />
+    <ClCompile Include="..\..\..\..\src\stream_connecter_base.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\stream_listener_base.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\endpoint.cpp" />
+    <ClCompile Include="..\..\..\..\src\options.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -579,6 +590,7 @@
     <ClInclude Include="..\..\..\..\src\zmq_draft.h">
       <Filter>src\include</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\src\ip_resolver.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="include">

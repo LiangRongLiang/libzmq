@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="Globals">
     <ProjectGuid>{641C5F36-32EE-4323-B740-992B651CF9D6}</ProjectGuid>
@@ -69,6 +69,42 @@
   <PropertyGroup>
     <Option-tweet>true</Option-tweet>
   </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTCG|Win32'">
+    <ClCompile />
+    <ClCompile>
+      <PreprocessorDefinitions>ZMQ_IOTHREAD_POLLER_USE_SELECT; ZMQ_POLL_BASED_ON_SELECT;ZMQ_USE_CV_IMPL_STL11</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugLTCG|Win32'">
+    <ClCompile />
+    <ClCompile>
+      <PreprocessorDefinitions>ZMQ_IOTHREAD_POLLER_USE_SELECT; ZMQ_POLL_BASED_ON_SELECT;ZMQ_USE_CV_IMPL_STL11</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <ClCompile />
+    <ClCompile>
+      <PreprocessorDefinitions>ZMQ_IOTHREAD_POLLER_USE_SELECT; ZMQ_POLL_BASED_ON_SELECT;ZMQ_USE_CV_IMPL_STL11</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLIB|Win32'">
+    <ClCompile />
+    <ClCompile>
+      <PreprocessorDefinitions>ZMQ_IOTHREAD_POLLER_USE_SELECT; ZMQ_POLL_BASED_ON_SELECT;ZMQ_USE_CV_IMPL_STL11</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugLIB|Win32'">
+    <ClCompile />
+    <ClCompile>
+      <PreprocessorDefinitions>ZMQ_IOTHREAD_POLLER_USE_SELECT; ZMQ_POLL_BASED_ON_SELECT;ZMQ_USE_CV_IMPL_STL11</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <ClCompile />
+    <ClCompile>
+      <PreprocessorDefinitions>ZMQ_IOTHREAD_POLLER_USE_SELECT; ZMQ_POLL_BASED_ON_SELECT;ZMQ_USE_CV_IMPL_STL11</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\platform.hpp" />
     <ClInclude Include="..\..\resource.h" />
@@ -189,6 +225,7 @@
     <ClCompile Include="..\..\..\..\src\dgram.cpp" />
     <ClCompile Include="..\..\..\..\src\dish.cpp" />
     <ClCompile Include="..\..\..\..\src\dist.cpp" />
+    <ClCompile Include="..\..\..\..\src\endpoint.cpp" />
     <ClCompile Include="..\..\..\..\src\epoll.cpp" />
     <ClCompile Include="..\..\..\..\src\err.cpp" />
     <ClCompile Include="..\..\..\..\src\fq.cpp" />
@@ -250,7 +287,9 @@
     <ClCompile Include="..\..\..\..\src\socks.cpp" />
     <ClCompile Include="..\..\..\..\src\socks_connecter.cpp" />
     <ClCompile Include="..\..\..\..\src\stream.cpp" />
+    <ClCompile Include="..\..\..\..\src\stream_connecter_base.cpp" />
     <ClCompile Include="..\..\..\..\src\stream_engine.cpp" />
+    <ClCompile Include="..\..\..\..\src\stream_listener_base.cpp" />
     <ClCompile Include="..\..\..\..\src\sub.cpp" />
     <ClCompile Include="..\..\..\..\src\tcp.cpp" />
     <ClCompile Include="..\..\..\..\src\tcp_address.cpp" />

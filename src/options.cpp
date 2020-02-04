@@ -264,6 +264,7 @@ int zmq::options_t::set_curve_key (uint8_t *destination_,
                                    const void *optval_,
                                    size_t optvallen_)
 {
+#if defined(ZMQ_HAVE_CURVE)
     switch (optvallen_) {
         case CURVE_KEYSIZE:
             memcpy (destination_, optval_, optvallen_);
@@ -292,6 +293,7 @@ int zmq::options_t::set_curve_key (uint8_t *destination_,
         default:
             break;
     }
+#endif
     return -1;
 }
 
